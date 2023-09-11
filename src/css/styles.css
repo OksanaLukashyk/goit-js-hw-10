@@ -1,0 +1,97 @@
+/* SlimSelector */
+.ss-main {
+  margin-bottom: 15px;
+  width: 15%;
+  min-width: 150px;
+}
+
+/* Loader */
+.loader {
+  margin: 0 auto 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  background: linear-gradient(0deg, rgba(255, 61, 0, 0.2) 33%, #ff3d00 100%);
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader.visually-hidden {
+  animation: none;
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Containers */
+.cat-info {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #5897fb;
+}
+
+.imgCont {
+  width: 500px;
+  height: 100%;
+  position: relative;
+}
+
+.cat-img {
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+.cat-img-shadow {
+  object-fit: contain;
+  object-position: center;
+  position: absolute;
+  z-index: 1;
+  bottom: -30px;
+  left: 0;
+  filter: blur(15px);
+  transform: scale(0.95);
+}
+
+.breedInfoTextCont {
+  padding: 5px;
+  max-width: 500px;
+}
+
+.breed-name,
+.breed-descr {
+  margin-bottom: 10px;
+}
+
+.breed-temp-header {
+  font-weight: bold;
+}
